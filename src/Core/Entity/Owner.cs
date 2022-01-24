@@ -10,5 +10,7 @@
         public string LastName { get; set; }
         public string City { get; set; }
         public DateTime PurchaseDate { get; set; }
+
+        public ICollection<Car> Cars { get; set; }
     }
 }

@@ -1,4 +1,7 @@
+using Core.Entity;
+using Core.Queries;
 using DAL;
+using DAL.Queries;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<CarsContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionStrings")));
 
+builder.Services.AddScoped<IQueryHandler<GetAllCarsQuery, IList<Car>>, GetAllCarsQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetAllOwnersQuery, IList<Owner>>, GetAllOwnersQueryHandler>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,9 +27,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

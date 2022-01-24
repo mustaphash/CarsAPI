@@ -10,5 +10,7 @@
         public string Color { get; set; }
         public string Fuel { get; set; }
         public DateTime DateOfManufacture { get; set; }
+
+        public ICollection<Owner> Owners { get; set; }
     }
 }
