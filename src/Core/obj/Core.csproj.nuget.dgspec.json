@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#Ex\\Cars\\Core\\Core.csproj": {}
+    "D:\\git\\Cars\\src\\Core\\Core.csproj": {}
   },
   "projects": {
-    "D:\\C#Ex\\Cars\\Core\\Core.csproj": {
+    "D:\\git\\Cars\\src\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#Ex\\Cars\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\git\\Cars\\src\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\C#Ex\\Cars\\Core\\Core.csproj",
+        "projectPath": "D:\\git\\Cars\\src\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\C#Ex\\Cars\\Core\\obj\\",
+        "outputPath": "D:\\git\\Cars\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
