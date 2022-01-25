@@ -32,6 +32,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\git\\Cars\\src\\Core\\Core.csproj": {
+                "projectPath": "D:\\git\\Cars\\src\\Core\\Core.csproj"
+              },
               "D:\\git\\Cars\\src\\DAL\\DAL.csproj": {
                 "projectPath": "D:\\git\\Cars\\src\\DAL\\DAL.csproj"
               }
@@ -208,16 +211,6 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.1, )"
             }

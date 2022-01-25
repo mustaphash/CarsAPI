@@ -14,7 +14,7 @@ namespace DAL.Queries
         public async Task<IList<Car>> HandleAsync(GetAllCarsQuery query, CancellationToken cancellationToken = default)
         {
             List<Car> cars = await _carContext.Cars.ToListAsync(cancellationToken);
-            
+
             return cars;
         }
     }

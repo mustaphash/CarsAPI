@@ -19,7 +19,7 @@ namespace DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("");
+            optionsBuilder.UseSqlServer(b => b.MigrationsAssembly("Cars"));
 
             base.OnConfiguring(optionsBuilder);
         }

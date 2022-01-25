@@ -722,8 +722,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1"
+          "Microsoft.EntityFrameworkCore": "6.0.1"
         },
         "compile": {
           "bin/placeholder/DAL.dll": {}
@@ -2089,6 +2088,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Core >= 1.0.0",
       "DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1",
@@ -2128,6 +2128,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\git\\Cars\\src\\Core\\Core.csproj": {
+              "projectPath": "D:\\git\\Cars\\src\\Core\\Core.csproj"
+            },
             "D:\\git\\Cars\\src\\DAL\\DAL.csproj": {
               "projectPath": "D:\\git\\Cars\\src\\DAL\\DAL.csproj"
             }
