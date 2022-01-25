@@ -11,6 +11,7 @@
         public string Fuel { get; set; }
         public DateTime DateOfManufacture { get; set; }
 
-        public ICollection<Owner> Owners { get; set; }
+        public int OwnerId { get; set; }
+        public Owner Owners { get; set; }
     }
 }
