@@ -11,7 +11,6 @@
         public string City { get; set; }
         public DateTime PurchaseDate { get; set; }
 
-        public int CarId { get; set; }
-        public Car Cars { get; set; }
+        public ICollection<Car> Cars { get; set; }
     }
 }
