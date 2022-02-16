@@ -19,7 +19,7 @@ namespace DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-HSU7GNR\\SQLEXPRESS;Initial Catalog=Cars;Integrated Security=True;Pooling=False");
+            optionsBuilder.UseSqlServer("Data Source=MUSTAFA;Initial Catalog=Cars;Integrated Security=True;Pooling=False");
 
             base.OnConfiguring(optionsBuilder);
         }
