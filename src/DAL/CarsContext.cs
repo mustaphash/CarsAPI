@@ -16,6 +16,7 @@ namespace DAL
         public DbSet<Car> Cars { get; set; }
 
         public DbSet<Owner> Owners { get; set; }
+        public DbSet<Buyer> Buyers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
