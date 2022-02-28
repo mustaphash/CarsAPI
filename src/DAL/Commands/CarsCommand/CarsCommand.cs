@@ -3,9 +3,9 @@ using Core.Entity;
 
 namespace DAL.Commands.CarsCommand
 {
-    public class CreateCarsCommand : ICommand
+    public class CarsCommand : ICommand
     {
-        public CreateCarsCommand(Car car)
+        public CarsCommand(Car car)
         {
             Car = car;
         }

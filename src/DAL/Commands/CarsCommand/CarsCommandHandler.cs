@@ -2,14 +2,14 @@
 
 namespace DAL.Commands.CarsCommand
 {
-    public class CreateCarsCommandHandler : ICommandHandler<CreateCarsCommand>
+    public class CarsCommandHandler : ICommandHandler<CarsCommand>
     {
         private readonly CarsContext _carsContext;
-        public CreateCarsCommandHandler(CarsContext carsContext)
+        public CarsCommandHandler(CarsContext carsContext)
         {
             _carsContext = carsContext;
         }
-        public async Task HandleAsync(CreateCarsCommand command, CancellationToken cancellationToken = default)
+        public async Task HandleAsync(CarsCommand command, CancellationToken cancellationToken = default)
         {
             _carsContext.AddAsync(command.Car);
             await _carsContext.SaveChangesAsync();

@@ -1,6 +1,8 @@
+using Core.Commands;
 using Core.Entity;
 using Core.Queries;
 using DAL;
+using DAL.Commands.CarsCommand;
 using DAL.Queries;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +19,9 @@ builder.Services.AddDbContext<CarsContext>(x => x.UseSqlServer(builder.Configura
 
 builder.Services.AddScoped<IQueryHandler<GetAllCarsQuery, IList<Car>>, GetAllCarsQueryHandler>();
 builder.Services.AddScoped<IQueryHandler<GetAllOwnersQuery, IList<Owner>>, GetAllOwnersQueryHandler>();
+
+builder.Services.AddScoped<ICommandHandler<CarsCommand>, CarsCommandHandler>();
+builder.Services.AddScoped<ICommandHandler<CarsCommand>, DeleteCarsCommandHandler>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
